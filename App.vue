@@ -2,6 +2,12 @@
 	export default {
 		onLaunch: function() {
 			console.log('App Launch')
+			uniCloud.callFunction({
+				name: 'create-ticket'
+			}).then((res) => {
+				console.log(res)
+				debugger
+			})
 		},
 		onShow: function() {
 			console.log('App Show')
