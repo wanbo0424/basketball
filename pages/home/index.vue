@@ -14,18 +14,17 @@
 			<button type="primary" @click="useCommon">使用公用模块</button>
 			<button type="primary" @click="upload">上传文件</button>
 		</view> -->
+		
+		<!-- 介绍页 -->
+		<introduce></introduce>
 		<u-tabbar v-model="current" :list="list" ></u-tabbar>
-		<!-- <view class="game-card" @click="doMessage">
-			<view class="card-img"></view>
-			<navigator :url="'/pages/randomMatch/index'">
-				<button type="default">随机匹配</button>
-			</navigator>
-		</view> -->
 	</view>
 </template>
 
 <script>
+	import Introduce from '../introduce/index'
 	export default {
+		components:{Introduce},
 		data() {
 			return {
 				show: false,
@@ -34,12 +33,12 @@
 					intro: '',
 					sex: ''
 				},
+				current: 'home',
 				list: [
 					{
 						iconPath: "home",
 						selectedIconPath: "home-fill",
 						text: '首页',
-						count: 2,
 						isDot: true,
 						customIcon: false,
 					},
@@ -47,7 +46,6 @@
 						iconPath: "account",
 						selectedIconPath: "account-fill",
 						text: '我的',
-						count: 23,
 						isDot: false,
 						customIcon: false,
 					}
@@ -243,45 +241,45 @@
 </script>
 
 <style lang="scss" scoped>
-	.content {
-		padding: 30rpx 40rpx;
-		.game-card{
-			height: 500rpx;
-			width: 100% ;
-			padding: 20rpx;
-			border: 2rpx solid black;
-			.card-img{
-				height: 80%;
-				width: 100% ;
-				border: 2rpx dashed black;
-				background: url(../../static/imgs/random-type.jpg) no-repeat;
-				background-size:100%;
-			}
-		}
-	}
+	// .content {
+	// 	padding: 30rpx 40rpx;
+	// 	.game-card{
+	// 		height: 500rpx;
+	// 		width: 100% ;
+	// 		padding: 20rpx;
+	// 		border: 2rpx solid black;
+	// 		.card-img{
+	// 			height: 80%;
+	// 			width: 100% ;
+	// 			border: 2rpx dashed black;
+	// 			background: url(../../static/imgs/random-type.jpg) no-repeat;
+	// 			background-size:100%;
+	// 		}
+	// 	}
+	// }
 
-	.title {
-		font-weight: bold;
-		text-align: center;
-		padding: 20px 0px;
-		font-size: 20px;
-	}
+	// .title {
+	// 	font-weight: bold;
+	// 	text-align: center;
+	// 	padding: 20px 0px;
+	// 	font-size: 20px;
+	// }
 
-	.tips {
-		color: #999999;
-		font-size: 14px;
-		padding: 20px 30px;
-	}
+	// .tips {
+	// 	color: #999999;
+	// 	font-size: 14px;
+	// 	padding: 20px 30px;
+	// }
 
-	.btn-list {
-		padding: 0px 30px;
-	}
+	// .btn-list {
+	// 	padding: 0px 30px;
+	// }
 
-	.btn-list button {
-		margin-bottom: 20px;
-	}
+	// .btn-list button {
+	// 	margin-bottom: 20px;
+	// }
 
-	.upload-preview {
-		width: 100%;
-	}
+	// .upload-preview {
+	// 	width: 100%;
+	// }
 </style>

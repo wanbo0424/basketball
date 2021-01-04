@@ -32,6 +32,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/introduce/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
